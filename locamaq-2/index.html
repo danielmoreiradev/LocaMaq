@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocaMaq | Locação de Equipamentos para Construção Civil em SP</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#111827',
+                            light: '#1F2937',
+                            yellow: '#EAB308', // Amarelo clássico de maquinário pesado
+                            yellowHover: '#CA8A04'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-pattern {
+            background-image: linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.95)), url('https://images.unsplash.com/photo-1541888086225-eb4306c57f79?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .float-wpp {
+            animation: pulse-wpp 2s infinite;
+        }
+        @keyframes pulse-wpp {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Topbar (Contato rápido) -->
+    <div class="bg-brand-dark text-gray-300 text-xs py-2 hidden sm:block">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div class="flex space-x-6">
+                <span><i class="fa-solid fa-location-dot text-brand-yellow mr-2"></i> Alameda Barão de Limeira, 572 - São Paulo</span>
+                <span><i class="fa-solid fa-clock text-brand-yellow mr-2"></i> Seg a Sex: 08h às 18h | Sáb: 07h às 12h</span>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-brand-yellow transition"><i class="fa-brands fa-instagram text-lg"></i></a>
+                <a href="#" class="hover:text-brand-yellow transition"><i class="fa-brands fa-facebook text-lg"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                <div class="w-10 h-10 bg-brand-yellow text-brand-dark rounded flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-helmet-safety"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-extrabold text-brand-dark leading-tight">Loca<span class="text-brand-yellow">Maq</span></h1>
+                    <p class="text-[10px] text-gray-500 font-semibold tracking-widest uppercase">Equipamentos</p>
+                </div>
+            </div>
+
+            <!-- Navegação Desktop -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#inicio" class="text-gray-700 hover:text-brand-yellow font-semibold transition">Início</a>
+                <a href="#equipamentos" class="text-gray-700 hover:text-brand-yellow font-semibold transition">Equipamentos</a>
+                <a href="#diferenciais" class="text-gray-700 hover:text-brand-yellow font-semibold transition">Diferenciais</a>
+                <a href="#contato" class="text-gray-700 hover:text-brand-yellow font-semibold transition">Contato</a>
+            </nav>
+
+            <!-- CTA Header -->
+            <div class="hidden md:flex">
+                <a href="#contato" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2.5 rounded-md font-bold shadow-lg transition flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> Orçamento Rápido
+                </a>
+            </div>
+
+            <!-- Menu Mobile Button -->
+            <div class="md:hidden flex items-center">
+                <button class="text-brand-dark hover:text-brand-yellow text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-pattern text-white pt-20 pb-28 sm:pt-28 sm:pb-36">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="max-w-2xl">
+                    <span class="inline-block py-1 px-3 rounded-full bg-brand-yellow/20 text-brand-yellow font-bold text-sm mb-4 border border-brand-yellow/30">
+                        Atendimento em toda Grande São Paulo
+                    </span>
+                    <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                        Sua obra <span class="text-brand-yellow border-b-4 border-brand-yellow">não pode parar</span> por falta de equipamento.
+                    </h2>
+                    <p class="text-lg sm:text-xl text-gray-300 mb-8 font-light">
+                        Locação de betoneiras, andaimes, marteletes e maquinário pesado com entrega rápida na sua obra em São Paulo e região metropolitana. Frota nova e revisada.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contato" class="text-center bg-brand-yellow hover:bg-brand-yellowHover text-brand-dark px-8 py-4 rounded-md font-bold text-lg shadow-[0_0_20px_rgba(234,179,8,0.3)] transition transform hover:-translate-y-1">
+                            Ver Catálogo de Preços
+                        </a>
+                        <a href="#equipamentos" class="text-center bg-transparent border-2 border-white hover:bg-white hover:text-brand-dark text-white px-8 py-4 rounded-md font-bold text-lg transition">
+                            Nossos Equipamentos
+                        </a>
+                    </div>
+                </div>
+                <div class="relative flex justify-end">
+                    <div class="relative rounded-[40px] shadow-[0_30px_50px_rgba(0,0,0,0.45)]">
+                        <div class="absolute -inset-1 border-2 border-brand-yellow/60 rounded-[42px] pointer-events-none"></div>
+                        <div class="relative rounded-[40px] overflow-hidden bg-gray-900/20">
+                            <img src="img/engenheiro1-secao.png" alt="Engenheiro avaliando obra" class="block rounded-[38px] max-w-[540px] min-h-[360px] w-full h-full object-cover" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tira de Benefícios -->
+    <div class="bg-brand-yellow text-brand-dark py-6 relative z-10 -mt-10 mx-4 sm:mx-auto max-w-6xl rounded-lg shadow-xl hidden md:block">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-8 divide-x divide-brand-dark/20">
+            <div class="flex items-center gap-4 pl-4">
+                <i class="fa-solid fa-truck-fast text-3xl"></i>
+                <div>
+                    <h4 class="font-bold text-lg leading-tight">Entrega Expressa</h4>
+                    <p class="text-sm font-medium text-brand-dark/80">Na sua obra em até 24h na capital</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4 pl-8">
+                <i class="fa-solid fa-screwdriver-wrench text-3xl"></i>
+                <div>
+                    <h4 class="font-bold text-lg leading-tight">Manutenção em Dia</h4>
+                    <p class="text-sm font-medium text-brand-dark/80">Máquinas revisadas e prontas pro uso</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4 pl-8">
+                <i class="fa-solid fa-file-invoice-dollar text-3xl"></i>
+                <div>
+                    <h4 class="font-bold text-lg leading-tight">Pagamento Facilitado</h4>
+                    <p class="text-sm font-medium text-brand-dark/80">Faturamento para CNPJ aprovado</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Equipamentos Destacados -->
+    <section id="equipamentos" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-brand-yellow font-bold uppercase tracking-wider mb-2">Nosso Catálogo</h3>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark">Equipamentos Mais Alugados</h2>
+                <div class="w-24 h-1 bg-brand-yellow mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden border border-gray-100 group">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="img/betoneira1.jpeg" alt="Betoneira 400 litros CSM" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-xl text-brand-dark mb-2">Betoneira 400 Litros</h4>
+                        <p class="text-gray-500 text-sm mb-4">CSM / Menegotti. Ideal para obras de médio e grande porte. Motor monofásico ou trifásico.</p>
+                        <a href="#contato" class="block w-full text-center bg-gray-100 hover:bg-brand-yellow hover:text-brand-dark text-gray-700 font-semibold py-2 rounded transition">
+                            Cotar Aluguel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden border border-gray-100 group">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="img/martelete1.jpeg" alt="Martelete rompedor" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-xl text-brand-dark mb-2">Martelete Rompedor</h4>
+                        <p class="text-gray-500 text-sm mb-4">10kg a 30kg. Alta produtividade para demolição de pisos, vigas e lajes de concreto.</p>
+                        <a href="#contato" class="block w-full text-center bg-gray-100 hover:bg-brand-yellow hover:text-brand-dark text-gray-700 font-semibold py-2 rounded transition">
+                            Cotar Aluguel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden border border-gray-100 group">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="img/andaime1.jpeg" alt="Andaime tubular" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-xl text-brand-dark mb-2">Andaime Tubular</h4>
+                        <p class="text-gray-500 text-sm mb-4">Painéis de 1,0x1,0m e 1,5x1,0m. Acompanha sapatas, pisos metálicos e guarda-corpo padrão NR-18.</p>
+                        <a href="#contato" class="block w-full text-center bg-gray-100 hover:bg-brand-yellow hover:text-brand-dark text-gray-700 font-semibold py-2 rounded transition">
+                            Cotar Aluguel
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden border border-gray-100 group">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="img/compactador1.jpeg" alt="Compactador de solo" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-xl text-brand-dark mb-2">Compactador de Solo</h4>
+                        <p class="text-gray-500 text-sm mb-4">Compactador tipo "Sapo". Motor a gasolina (4 tempos). Perfeito para compactação de valas e fundações.</p>
+                        <a href="#contato" class="block w-full text-center bg-gray-100 hover:bg-brand-yellow hover:text-brand-dark text-gray-700 font-semibold py-2 rounded transition">
+                            Cotar Aluguel
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contato" class="inline-block text-brand-dark font-bold hover:text-brand-yellow transition underline decoration-2 underline-offset-4">
+                    Ver todos os 50+ equipamentos disponíveis <i class="fa-solid fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Diferenciais -->
+    <section id="diferenciais" class="py-20 bg-brand-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h3 class="text-brand-yellow font-bold uppercase tracking-wider mb-2">Por que a LocaMaq?</h3>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold mb-6 leading-tight">Experiência de 15 anos no canteiro de obras paulistano.</h2>
+                    <p class="text-gray-400 mb-8 text-lg">
+                        Entendemos a dinâmica de São Paulo. Atrasos custam caro. Por isso, construímos uma logística imbatível para garantir que a máquina chegue na sua obra no dia e hora marcados, funcionando perfeitamente.
+                    </p>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-brand-yellow text-xl mt-1 mr-3"></i>
+                            <div>
+                                <h5 class="font-bold text-lg">Substituição Imediata</h5>
+                                <p class="text-gray-400 text-sm">Se a máquina quebrar, enviamos outra no mesmo dia. Sem burocracia.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-brand-yellow text-xl mt-1 mr-3"></i>
+                            <div>
+                                <h5 class="font-bold text-lg">Suporte Técnico</h5>
+                                <p class="text-gray-400 text-sm">Nossa equipe ensina sua equipe a operar o equipamento com segurança.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="relative">
+                    <!-- Simulando uma imagem realista -->
+                    <div class="rounded-xl overflow-hidden shadow-2xl border-4 border-gray-700">
+                        <img src="./img/locamaq22.png"alt="Engenheiro inspecionando obra" class="w-full h-auto object-cover opacity-80 hover:opacity-100 transition">
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-brand-yellow text-brand-dark p-6 rounded-lg shadow-xl font-bold max-w-xs hidden sm:block">
+                        <p class="text-4xl mb-1">+2.000</p>
+                        <p class="text-sm">Obras atendidas na Grande São Paulo nos últimos 5 anos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Contato -->
+    <section id="contato" class="py-20 bg-brand-yellow">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-brand-dark mb-6 tracking-tight">Precisa de um equipamento para amanhã?</h2>
+            <p class="text-xl text-brand-dark/80 mb-10 font-medium">Nossa equipe comercial responde orçamentos via WhatsApp em menos de 10 minutos.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="#" class="bg-green-600 hover:bg-green-700 text-white px-8 py-5 rounded-lg font-bold text-xl shadow-xl transition flex items-center justify-center gap-3 transform hover:scale-105">
+                    <i class="fa-brands fa-whatsapp text-3xl"></i> Chamar no WhatsApp
+                </a>
+                <a href="tel:+5511999999999" class="bg-brand-dark hover:bg-gray-800 text-white px-8 py-5 rounded-lg font-bold text-xl shadow-xl transition flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-phone text-xl"></i> (11) 99738-1487
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-light text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="col-span-1 md:col-span-1">
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="w-8 h-8 bg-brand-yellow text-brand-dark rounded flex items-center justify-center text-sm">
+                        <i class="fa-solid fa-helmet-safety"></i>
+                    </div>
+                    <h2 class="text-xl font-extrabold text-white">Loca<span class="text-brand-yellow">Maq</span></h2>
+                </div>
+                <p class="text-sm mb-4">A parceira de confiança do construtor paulistano. Locação rápida, fácil e sem dor de cabeça.</p>
+                <p class="text-sm">CNPJ: 01.464.765/0001-45</p>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-bold mb-4">Equipamentos</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-brand-yellow transition">Betoneiras</a></li>
+                    <li><a href="#" class="hover:text-brand-yellow transition">Andaimes</a></li>
+                    <li><a href="#" class="hover:text-brand-yellow transition">Marteletes</a></li>
+                    <li><a href="#" class="hover:text-brand-yellow transition">Compactadores</a></li>
+                    <li><a href="#" class="hover:text-brand-yellow transition">Geradores</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-bold mb-4">Links Úteis</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-brand-yellow transition">Como Alugar</a></li>
+                    <li><a href="#" class="hover:text-brand-yellow transition">Área de Cobertura</a></li>
+                    <li><a href="#" class="hover:text-brand-yellow transition">Dúvidas Frequentes</a></li>
+                    <li><a href="#" class="hover:text-brand-yellow transition">Trabalhe Conosco</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-bold mb-4">Atendimento</h4>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot mt-1 text-brand-yellow"></i>
+                        <span>Alameda Barão de Limeira, 572, CEP 01202-000 - São Paulo / SP</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-envelope text-brand-yellow"></i>
+                        <span>orcamento@locamaq.com.br</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-gray-800 text-sm text-center md:text-left flex flex-col md:flex-row justify-between items-center">
+            <p>&copy; 2026 LocaMaq Equipamentos. Todos os direitos reservados.</p>
+            <p class="mt-2 md:mt-0">Criado com <i class="fa-solid fa-heart text-red-500 mx-1"></i> por Daniel DEV</p>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="#" class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:bg-green-600 transition-colors z-50 float-wpp" target="_blank" title="Fale conosco no WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
